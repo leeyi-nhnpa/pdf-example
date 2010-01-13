@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <!-- Servlets -->
+
+    <servlet>
+        <description>servlet which allows to download user's invoice.pdf</description>
+        <display-name>invoice.pdf</display-name>
+        <servlet-name>invoice.pdf</servlet-name>
+        <servlet-class>comtech.pdf.PdfServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>invoice.pdf</servlet-name>
+        <url-pattern>/invoice.pdf</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome files -->
+
+    <welcome-file-list>
+        <welcome-file>invoice.pdf</welcome-file>
+    </welcome-file-list>
+
+    <session-config>
+        <session-timeout>35</session-timeout>
+    </session-config>
+
+    <mime-mapping>
+        <extension>html</extension>
+        <mime-type>text/html</mime-type>
+    </mime-mapping>
+
+    <mime-mapping>
+        <extension>txt</extension>
+        <mime-type>text/plain</mime-type>
+    </mime-mapping>
+
+    <mime-mapping>
+        <extension>pdf</extension>
+        <mime-type>application/pdf</mime-type>
+    </mime-mapping>
+
+</web-app>
+
