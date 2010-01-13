@@ -1,7 +1,5 @@
 package comtech.pdf;
 
-import comtech.swc.utils.DateUtils;
-import comtech.swc.utils.FileUtils;
 import comtech.util.DocumentXMLStreamWriter;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -21,7 +19,6 @@ import javax.xml.transform.sax.SAXResult;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.*;
-import java.util.Date;
 
 public class PdfServlet extends HttpServlet {
 
@@ -120,7 +117,7 @@ public class PdfServlet extends HttpServlet {
         document.startElement("invoice");
 
         document.element("number", "Сч-456");
-        document.element("date", DateUtils.getDate(new Date()));
+        document.element("date", "13.01.2010");
 
         document.startElement("requisites");
         document.attribute("type", "purveyor");

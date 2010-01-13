@@ -7,15 +7,9 @@
     <artifactId>pdf-example</artifactId>
     <packaging>war</packaging>
     <version>1.0</version>
-    <name>Reservation based upon swm</name>
+    <name>PDF generating example</name>
 
     <dependencies>
-
-        <dependency>
-            <groupId>comtech.swm</groupId>
-            <artifactId>reservation-common</artifactId>
-            <version>1.0</version>
-        </dependency>
 
         <dependency>
             <groupId>org.apache.xmlgraphics</groupId>
