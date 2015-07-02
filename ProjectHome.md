@@ -1,0 +1,1 @@
+This project tends to be example of generating of PDF document inside a web application with Apache Fop library.
